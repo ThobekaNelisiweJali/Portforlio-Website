@@ -1,1 +1,200 @@
+/* Custom CSS */
+:root {
+    --teal: #0EA5E9;
+    --teal-light: #38BDF8;
+    --teal-dark: #0284C7;
+    --navy: teal;
+    --navy-light: black;
 
+  }
+  
+  /* Dark Mode Styles */
+  .dark {
+    --teal: #38BDF8;
+    --teal-light: #7DD3FC;
+    --teal-dark: #0EA5E9;
+    --navy: white;
+    --navy-light: black; 
+  }
+  
+  html.dark {
+    background-color: #0F172A;
+    color: #F8FAFC;
+  }
+  
+  .dark .bg-white {
+    background-color: #1E293B;
+  }
+  
+  .dark .text-navy {
+    color: lightseagreen;
+  }
+  
+  .dark .text-gray-600, 
+  .dark .text-gray-700 {
+    color: lightseagreen;
+  }
+  
+  .dark .bg-gray-50 {
+    background-color: #0F172A;
+  }
+  
+  .dark .bg-gray-100 {
+    background-color: #1E293B;
+  }
+  
+  .dark .text-gray-700 {
+    color: #E2E8F0;
+  }
+  
+  .dark .border-gray-300 {
+    border-color: #334155;
+  }
+  
+  .dark .glass {
+    background-color: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark .neumorphic {
+    background-color: #1E293B;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3), -5px -5px 10px rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Base Styles */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    color: #1E293B;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  .text-teal {
+    color: var(--teal);
+  }
+  
+  .bg-teal {
+    background-color: var(--teal);
+  }
+  
+  .text-navy {
+    color: var(--navy);
+  }
+  
+  .bg-navy {
+    background-color: var(--navy);
+  }
+  
+  /* Fixed container width and consistent padding */
+  .container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes bounceSlight {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: var(--teal);
+    }
+  }
+  
+  @keyframes morph {
+    0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+  }
