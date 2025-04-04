@@ -1,0 +1,255 @@
+    <!-- Footer -->
+      <footer class="bg-gray-900 text-white p-6 text-center dark:bg-gray-800">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+              <h2 class="text-2xl font-bold mb-1">
+                <span class="text-teal">Data</span>Chain
+              </h2>
+              <p class="text-gray-300">Supply Chain Data Science Portfolio</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+              <div class="text-center md:text-left">
+                <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+                <ul class="space-y-2">
+                  <li>
+                    <a href="#home" class="text-gray-300 hover:text-teal transition-colors">Home</a>
+                  </li>
+                  <li>
+                    <a href="#about" class="text-gray-300 hover:text-teal transition-colors">About</a>
+                  </li>
+                  <li>
+                    <a href="#projects" class="text-gray-300 hover:text-teal transition-colors">Projects</a>
+                  </li>
+                  <li>
+                    <a href="#contact" class="text-gray-300 hover:text-teal transition-colors">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="text-center md:text-left">
+                <h3 class="text-lg font-semibold mb-2">Resources</h3>
+                <ul class="space-y-2">
+                  <li>
+                    <a href="#" class="text-gray-300 hover:text-teal transition-colors inline-flex items-center">
+                      Blog 
+                      <svg class="ml-1 w-3 h-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                      </svg>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="#" class="text-gray-300 hover:text-teal transition-colors inline-flex items-center">
+                      Publications 
+                      <svg class="ml-1 w-3 h-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-8 pt-6 border-t border-white border-opacity-20 text-center">
+            <p class="text-gray-400">
+              © <span id="current-year"></span> All Rights Reserved. Made with 
+              <svg class="inline w-4 h-4 text-red-400 mx-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+              by Thobeka Jali
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      // Set current year in footer
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Theme toggle functionality
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+      const sunIcon = document.getElementById('sun-icon');
+      const moonIcon = document.getElementById('moon-icon');
+      const sunIconMobile = document.getElementById('sun-icon-mobile');
+      const moonIconMobile = document.getElementById('moon-icon-mobile');
+      const html = document.documentElement;
+
+      // Check for saved theme preference
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        html.classList.add('dark');
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+        sunIconMobile.classList.remove('hidden');
+        moonIconMobile.classList.add('hidden');
+      }
+
+      // Toggle theme function
+      function toggleTheme() {
+        if (html.classList.contains('dark')) {
+          html.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+          sunIcon.classList.add('hidden');
+          moonIcon.classList.remove('hidden');
+          sunIconMobile.classList.add('hidden');
+          moonIconMobile.classList.remove('hidden');
+        } else {
+          html.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+          sunIcon.classList.remove('hidden');
+          moonIcon.classList.add('hidden');
+          sunIconMobile.classList.remove('hidden');
+          moonIconMobile.classList.add('hidden');
+        }
+      }
+
+      themeToggle.addEventListener('click', toggleTheme);
+      themeToggleMobile.addEventListener('click', toggleTheme);
+
+      // Navbar scroll effect
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          navbar.classList.add('glass', 'shadow-md', 'py-3');
+          navbar.classList.remove('bg-transparent', 'py-5');
+        } else {
+          navbar.classList.remove('glass', 'shadow-md', 'py-3');
+          navbar.classList.add('bg-transparent', 'py-5');
+        }
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+            
+            // If mobile menu is open, close it
+            if (!mobileMenu.classList.contains('hidden')) {
+              mobileMenu.classList.add('hidden');
+            }
+          }
+        });
+      });
+
+      // Project filtering
+      const filterButtons = document.querySelectorAll('[id^="filter-"]');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Reset all buttons
+          filterButtons.forEach(btn => {
+            btn.classList.remove('bg-teal', 'text-white');
+            btn.classList.add('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
+          });
+          
+          // Highlight selected button
+          button.classList.add('bg-teal', 'text-white');
+          button.classList.remove('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
+          
+          const category = button.id.replace('filter-', '');
+          
+          // Filter projects
+          projectCards.forEach(card => {
+            if (category === 'all') {
+              card.style.display = 'block';
+            } else {
+              const categories = card.dataset.categories.split(',');
+              if (categories.includes(category)) {
+                card.style.display = 'block';
+              } else {
+                card.style.display = 'none';
+              }
+            }
+          });
+        });
+      });
+
+      // Contact form submission
+      const contactForm = document.getElementById('contact-form');
+      const formMessage = document.getElementById('form-message');
+      const submitButton = document.getElementById('submit-button');
+
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Disable button and show loading state
+        submitButton.disabled = true;
+        submitButton.innerHTML = `<span>Sending...</span>`;
+        
+        // Simulate form submission delay
+        setTimeout(() => {
+          // Reset form
+          contactForm.reset();
+          
+          // Show success message
+          formMessage.classList.remove('hidden');
+          
+          // Reset button
+          submitButton.disabled = false;
+          submitButton.innerHTML = `<span>Send Message</span>
+            <svg class="ml-2 w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>`;
+          
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            formMessage.classList.add('hidden');
+          }, 5000);
+        }, 1500);
+      });
+
+      // Highlight active section in navigation based on scroll position
+      window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        let currentSection = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 100;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute('id') || '';
+          
+          if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            currentSection = sectionId;
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${currentSection}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
