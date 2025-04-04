@@ -1,1 +1,174 @@
+/* Ensure proper spacing around sections */
+  section {
+    padding: 3rem 0;
+  }
+  
+  #about, #education, #skills, #projects, #contact {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  /* Ensure images are properly contained */
+  .bg-cover {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Fix project card heights */
+  .project-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-card > div:last-child {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-card p {
+    flex-grow: 1;
+  }
+  
+  /* Fix mobile navbar */
+  #mobile-menu {
+    top: 100%;
+    left: 0;
+  }
+  
+  /* Fix footer spacing */
+  footer {
+    padding: 2rem 0;
+  }
+
+  /*-- Intro Head--*/
+
+  .centered-text {
+    position: absolute;
+    top: 30%; /* Moves text up */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: lightseagreen; /* Adjust for dark mode */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #fff; /* Cursor effect */
+    width: 0;
+    animation: typing 3s steps(30, end) forwards, blinkCursor 0.8s infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkCursor {
+    50% {
+        border-color: transparent;
+    }
+}
+  
+  /*-- Animated Galary--*/
+
+ .slider{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 30s linear infinite;
+ }
+ @keyframes rotate{
+  0%{
+    transform: perspective(1000px) rotateY(0deg);
+  }
+
+  100%{
+    transform: perspective(1000px) rotateY(360deg)
+  }
+ }
+
+ .slider span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+
+ }
+
+ .slider span img{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  object-fit: cover;
+  transition: 2s;
+
+ }
+
+ .slider span:hover img{
+  transform: translateY(-50px) scale(1.2);
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-container {
+  display: grid;
+  place-items: center;
+}
+
+.slider-container {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -100px;
+}
+ 
+/*-- Add image to the about me section--*/
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 350px; /* Adjust as needed */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Hover effect for content boxes */
+.grid div {
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+}
+
+.grid div:hover {
+  
+    background-color: #13274F ; /* Change to a highlighted color */
+  color: white; /* Change text color on hover */
 
