@@ -43,7 +43,18 @@ The code to both my html file and CSS File has been provided in the following ma
 
 - An HTML and CSS folder that consists of the entire code for the project. This was attached for those who prefer to see the whole document in one page
 - Sectional HTML folders that consist of the code for each section on the html file. Just go to the desired section and you will find the code for that section. All html files have the .html attribute
-- Sectional CSS files that consist of the code for sections in the CSS files. I tried my best to make it easier for reading. If its a bit confusing please refer to the complete folder. All CSS Folders have a .css attribute
+- Sectional CSS files that consist of the code for sections in the CSS files. I tried my best to make it easier for reading. If its a bit confusing please refer to the complete folder. All CSS Folders have a .css attribute.
+
+# Technologies Used
+
+The following languages and technologies were used 
+
+- lovable.AI : To get the basic structure of the Website
+- ChatGPT : To assist with understunding annimations and help whenever I got stuck
+- Font Awesome: To insert any icons that I need
+- HTML programming Language: For the basic structure of the Website 
+- CSS: For the styling and Effects
+- Tailwind CSS: For Certain CSS related animations and editing 
 
 
 # Theme Inspiration 
