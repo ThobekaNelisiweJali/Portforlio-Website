@@ -45,10 +45,17 @@ The code to both my html file and CSS File has been provided in the following ma
 - Sectional HTML folders that consist of the code for each section on the html file. Just go to the desired section and you will find the code for that section. All html files have the .html attribute
 - Sectional CSS files that consist of the code for sections in the CSS files. I tried my best to make it easier for reading. If its a bit confusing please refer to the complete folder. All CSS Folders have a .css attribute
 
+
+# Theme Inspiration 
+
+The theme of the website was inspired by my profession which is data science. I want everyone who visits the page to have a picture of science and know that they are in a page of a future scientist. This goes for the dimentions of the pictures, the annimations that were used, the colours scales of the content and even the pictures that were cosidered. I am a person who thinks deeply even when it comes to the dimentions of pictures and am dedicated to learn how to project my thought no matter how difficult it may be. 
+
   
 # Challenges and Lessons 
 
 Ininitally I had used HTML, CSS and JavaScript to complete my project. Little did I know that I would have to delete the entire javascript file that made up almost half of my project. Not only did I experience a mini mental break down I consulted with chatgpt seeking for guidance on the way forward. ChatGPT suggested HTML and CSS annimations that I was willing to try. It took me a whole day to figure out just the design which was frustrating yet fulfilling in the end. I also never knew how something as simple as selecting the right colors could be so frustrating. I spent almost two hours just googling and trying out different shades of blue to ensure they dont clash with the overall theme. I cant fail to mention the accidental deletion of sections which caused me a mini panicc but luckily I was able to find my way back. 
+
+POV : If there are traces of Java i havent removed it wasnt intentional. I tried my best to remove it
 
 # Conclusion 
 
